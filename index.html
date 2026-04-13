@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J-Beauty DB - Japanese Skincare, Decoded</title>
+<meta name="description" content="A curated database of Japanese skincare products for international buyers. Find what works for your skin.">
+<meta property="og:title" content="J-Beauty DB - Japanese Skincare, Decoded">
+<meta property="og:description" content="A curated database of Japanese skincare products for international buyers. Find what works for your skin.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://humancronadmin.github.io/j-beauty-db/">
+<link rel="canonical" href="https://humancronadmin.github.io/j-beauty-db/">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-brand">J-Beauty<span>DB</span></div>
+  <div class="nav-links">
+    <a href="database.html">Database</a>
+    <a href="#">Guides</a>
+    <a href="#">About</a>
+  </div>
+</nav>
+<section class="hero">
+  <h1>Japanese Skincare, <em>Decoded.</em></h1>
+  <p>Japanese skincare, decoded. Find what works for your skin.</p>
+  <a href="database.html" class="btn btn-primary">Browse Database</a>
+</section>
+<section class="problems">
+  <h2>The Problem</h2>
+  <div class="problem-grid" id="problem-grid"></div>
+</section>
+<div class="stats" id="stats-row"></div>
+<section class="hero" style="padding-top:0">
+  <h2 style="margin-bottom:12px">Ready to find your next holy grail?</h2>
+  <a href="database.html" class="btn btn-outline">Explore the Database</a>
+</section>
+<footer class="footer">
+  <p>J-Beauty DB &mdash; built for the international J-beauty community</p>
+</footer>
+<script>
+const problems=[
+  {icon:"🔍",title:"Thousands of products, no filter",desc:"Sorting through endless options with no way to narrow down what actually fits your skin."},
+  {icon:"🇯🇵",title:"Ingredient lists in Japanese",desc:"Key details locked behind a language barrier. Hard to know what you're putting on your face."},
+  {icon:"🤷",title:"Not sure what works for your skin type",desc:"Recommendations everywhere, but rarely matched to your specific skin type and concerns."}
+];
+const stats=[
+  {num:"60+",label:"Products"},
+  {num:"10",label:"Categories"},
+  {num:"All",label:"Skin Types"}
+];
+document.getElementById("problem-grid").innerHTML=problems.map(p=>`<div class="problem-card"><div class="icon">${p.icon}</div><h3>${p.title}</h3><p>${p.desc}</p></div>`).join("");
+document.getElementById("stats-row").innerHTML=stats.map(s=>`<div class="stat"><div class="num">${s.num}</div><div class="label">${s.label}</div></div>`).join("");
+</script>
+</body>
+</html>
